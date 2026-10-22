@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "blanq-open": {
+      "type": "http",
+      "url": "https://agent.blanq.ai/mcp"
+    }
+  }
+}
