@@ -1,0 +1,15 @@
+{
+  "name": "blanq-dev",
+  "description": "Check your Blanq wallet balances and open your wallet in the chat.",
+  "owner": {
+    "name": "Blanq Labs",
+    "email": "support@blanqlabs.com",
+    "url": "https://www-dev.blanq.ai"
+  },
+  "plugins": [
+    {
+      "name": "blanq-dev",
+      "source": "."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "blanq-dev": {
+      "type": "http",
+      "url": "https://agent-dev.blanq.ai/mcp/claude"
+    }
+  }
+}

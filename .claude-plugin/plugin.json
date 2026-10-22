@@ -1,0 +1,23 @@
+{
+  "name": "blanq-dev",
+  "displayName": "Blanq.dev",
+  "version": "1.6.2-rc.18",
+  "description": "Check your Blanq wallet balances and open your wallet in the chat.",
+  "author": {
+    "name": "Blanq Labs",
+    "email": "support@blanqlabs.com",
+    "url": "https://www-dev.blanq.ai"
+  },
+  "homepage": "https://www-dev.blanq.ai",
+  "repository": "https://github.com/blanqlabs/blanq-plugin-claude",
+  "keywords": [
+    "wallet",
+    "stablecoin",
+    "usd",
+    "eur",
+    "self-custody"
+  ],
+  "icon": "./assets/logo.png",
+  "privacyPolicyUrl": "https://www-dev.blanq.ai/legal/privacy",
+  "termsOfServiceUrl": "https://www-dev.blanq.ai/legal/terms"
+}
