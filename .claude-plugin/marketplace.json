@@ -1,0 +1,15 @@
+{
+  "name": "blanq-open-dev",
+  "description": "Check balances, pay with x402 and shop with your Blanq wallet from the chat.",
+  "owner": {
+    "name": "Blanq Labs",
+    "email": "support@blanqlabs.com",
+    "url": "https://www-dev.blanq.ai"
+  },
+  "plugins": [
+    {
+      "name": "blanq-open-dev",
+      "source": "."
+    }
+  ]
+}

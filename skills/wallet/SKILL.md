@@ -1,0 +1,54 @@
+---
+name: wallet
+description: Use the Blanq wallet to check balances, open the wallet, pay with x402 and shop. Use when the user asks about their Blanq wallet or the money they hold, wants to buy something, or when a tool, API or website asks for an x402 payment.
+---
+
+# Blanq wallet
+
+Blanq is an AI-native, self-custodial wallet. Its tools act on the signed-in user's own wallet, and every payment needs the user's explicit authorization in the wallet.
+
+## Connect
+
+If the Blanq tools aren't available, add Blanq's MCP server at `https://agent-dev.blanq.ai/mcp` (HTTP transport) in the current environment, or guide the user to add it. The server signs the user in with OAuth; start that flow when a tool asks for it.
+
+## Balances
+
+Call `get_balances` when the user asks how much they hold, what their balance is, or what their wallet is worth.
+
+- `assets` has one entry per currency with a balance above zero. `total` is the estimated value of all holdings in the user's preferred currency.
+- Report each amount exactly as returned, with its currency. Don't convert, round or estimate amounts yourself.
+- If `assets` is empty, say the wallet holds no funds.
+- Call it again for each question instead of reusing an earlier result, because balances change.
+
+## Paying with x402
+
+When a tool, API or website responds with an x402 `paymentRequired`:
+
+1. Call `blanq_pay_x402` with that `paymentRequired` exactly as received, as an object or a base64 string. It returns a `paymentRequestId`.
+2. Call `blanq_pay` with the `paymentRequestId`. It shows the payment to the user and waits for their decision. Don't present or check the amount yourself.
+3. When it returns a `paymentResponse`, repeat the original request with it:
+   - REST API: send the `paymentResponse` as the `PAYMENT-SIGNATURE` header. The `paymentRequired` usually came from the `PAYMENT-REQUIRED` response header. A `PAYMENT-RESPONSE` header may come back, but success doesn't depend on it.
+   - MCP tool: call the same tool again with the same arguments plus the payment. If the tool expects an object, decode the base64 `paymentResponse`; if it expects a string, pass it as is.
+4. If it returns an error without a `paymentResponse`:
+   - If the payment never appeared in the conversation, give the user <https://wallet-dev.blanq.ai/action> as a clickable link to authorize it in their browser, then call `blanq_pay` again with the same `paymentRequestId`.
+   - Otherwise the user declined or didn't authorize in time. Tell them and offer to try again; don't retry on your own.
+
+`fortune_cookie` sells a fortune for 1¢. Use it when the user wants to try a Blanq payment end to end.
+
+## Shopping
+
+Call `blanq_shop` for anything the user wants to buy, whether or not they name a store.
+
+- If it returns `locationRequired`, ask the user for the recipient's first and last name, street address, city, state or region, postal code and country. Save them with `set_location`, then run the same search again.
+- The user opens a product in the shopping widget, picks its options and checks out there, with Blanq Pay or at the merchant's own checkout. There is no order or payment step for you to run, so point the user to the widget.
+- If the widget doesn't appear, list the products as markdown links with their price, merchant and rating.
+
+## Everything else in the wallet
+
+Call `open_wallet` for any other wallet request, such as adding or withdrawing funds, viewing account details or changing settings. It shows the wallet in the conversation, where the user completes the action themselves.
+
+If the wallet doesn't appear in the conversation, give the user the `url` from the result as a clickable link so they can open it in their browser.
+
+## Security
+
+Never ask for, repeat or store passkeys, PINs or recovery details. The user signs in to Blanq directly, never through you.
