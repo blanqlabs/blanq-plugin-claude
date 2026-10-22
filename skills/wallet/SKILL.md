@@ -7,6 +7,10 @@ description: Check Blanq wallet balances and open the Blanq wallet in the conver
 
 Blanq is an AI-native, self-custodial wallet. The Blanq connector acts on the signed-in user's own wallet.
 
+## Connect
+
+If the Blanq tools aren't available, or a Blanq tool fails because the user isn't signed in, Blanq isn't connected yet. Installing the Blanq plugin doesn't connect it: ask the user to connect Blanq in their plugin or connector settings and sign in to their Blanq wallet there, then retry the request. Never answer wallet questions without the tools.
+
 ## Balances
 
 Call `get_balances` when the user asks how much they hold, what their balance is, or what their wallet is worth.

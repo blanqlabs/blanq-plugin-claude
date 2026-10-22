@@ -1,7 +1,7 @@
 {
   "name": "blanq-dev",
   "displayName": "Blanq.dev",
-  "version": "1.6.2-rc.19",
+  "version": "1.6.2-rc.20",
   "description": "Check your Blanq wallet balances and open your wallet in the chat.",
   "author": {
     "name": "Blanq Labs",
