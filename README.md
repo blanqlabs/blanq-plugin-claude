@@ -6,7 +6,7 @@ This plugin connects Claude to your Blanq wallet, so you can check your balances
 
 ## Use it
 
-1. Install the plugin, then connect Blanq and sign in to your Blanq wallet when Claude asks.
+1. Install the plugin, then connect Blanq in Claude's plugin or connector settings and sign in to your Blanq wallet.
 2. Ask Claude things like:
 
    - "What's my Blanq balance?"

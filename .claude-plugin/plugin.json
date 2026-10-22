@@ -1,7 +1,7 @@
 {
   "name": "blanq-open-dev",
   "displayName": "Blanq.open-dev",
-  "version": "1.6.2-rc.19",
+  "version": "1.6.2-rc.20",
   "description": "Check balances, pay with x402 and shop with your Blanq wallet from the chat.",
   "author": {
     "name": "Blanq Labs",

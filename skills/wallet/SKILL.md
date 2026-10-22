@@ -9,7 +9,9 @@ Blanq is an AI-native, self-custodial wallet. Its tools act on the signed-in use
 
 ## Connect
 
-If the Blanq tools aren't available, add Blanq's MCP server at `https://agent-dev.blanq.ai/mcp` (HTTP transport) in the current environment, or guide the user to add it. The server signs the user in with OAuth; start that flow when a tool asks for it.
+If the Blanq tools aren't available, or a Blanq tool fails because the user isn't signed in, Blanq isn't connected yet. Installing the Blanq plugin doesn't connect it: ask the user to connect Blanq in their plugin or connector settings and sign in to their Blanq wallet there, then retry the request. Never answer wallet questions without the tools.
+
+If Blanq isn't installed in the current environment at all, add Blanq's MCP server at `https://agent-dev.blanq.ai/mcp` (HTTP transport), or guide the user to add it. The server signs the user in with OAuth; start that flow when a tool asks for it.
 
 ## Balances
 
