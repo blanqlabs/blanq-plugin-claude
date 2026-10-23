@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "blanq-open",
-      "source": "."
+      "source": "./"
     }
   ]
 }
