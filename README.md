@@ -1,20 +1,24 @@
 # Blanq.open-dev
 
-Blanq wallet is the first AI-native secure, self-custodial wallet for tokenized assets. Assets are always in the user's control, while the signing keys stay secure in Blanq's Trusted Execution Environment (TEE).
+Blanq is a smart, secure wallet that lives natively in your agents. 
+Smart: Your assets earn attractive yield while you hold and rewards when you pay. You can deposit and withdraw funds into your wallet anytime, just like a traditional bank account. 
+Secure: All your assets are tokenized on public blockchains and held self-custodially. The signing keys are generated on-the-fly in Blanq's Trusted Execution Environment (TEE) with multi-factor authorization and are never stored. This means only you control your assets. 
+This server lets chat agents connect to users' Blanq wallet and interact with it in-chat.
+The user can check balance, see how to deposit assets, enquire what their cash earns and shop products and services over x402 and ucp protocol.
 
-This plugin connects Claude to your Blanq wallet, so you can check your balances, open your wallet, pay for things with x402 once you authorize each payment, and shop Blanq's catalog.
+This plugin connects Claude to your Blanq wallet. Interact with your Blanq wallet in the conversation - eg. open wallet widgets, check balances, get deposit instructions and yield information.
 
 ## Use it
 
 1. Install the plugin, then connect Blanq in Claude's plugin or connector settings and sign in to your Blanq wallet.
 2. Ask Claude things like:
 
-   - "What's my Blanq balance?"
-   - "Find me trail running shoes."
-   - "Buy a fortune cookie with Blanq."
+   - "Open my wallet."
+   - "What's my wallet balance?"
+   - "How do I deposit cash?"
 
 ## Data
 
-The plugin runs no code on your device. It reaches Blanq's MCP server at the URL in its MCP configuration, signed in as you through OAuth. It receives the searches, delivery location and payment requests you ask for, and returns your balances, product results, payment confirmations and a link to your wallet. Every payment needs your authorization in the wallet.
+The plugin runs no code on your device. It reaches Blanq's MCP server at the URL in its MCP configuration, signed in as you through OAuth and lets you interact with your wallet from your chat.
 
 Privacy policy: <https://www-dev.blanq.ai/legal/privacy>

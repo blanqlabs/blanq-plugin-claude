@@ -1,6 +1,6 @@
 ---
 name: wallet
-description: Use the Blanq wallet to check balances, deposit cash, see cash yield, open the wallet, pay with x402 and shop. Use when the user asks about their Blanq wallet or the money they hold, wants to deposit or know what their cash earns, wants to buy something, or when a tool, API or website asks for an x402 payment.
+description: Use the Blanq wallet to check balances, deposit cash, see cash yield, open the wallet and pay with x402. Use when the user asks about their Blanq wallet or the money they hold, wants to deposit or know what their cash earns, or when a tool, API or website asks for an x402 payment.
 ---
 
 # Blanq wallet
@@ -15,7 +15,7 @@ If Blanq isn't installed in the current environment at all, add Blanq's MCP serv
 
 ## Balances
 
-Call `get_balances` when the user asks how much they hold, what their balance is, or what their wallet is worth.
+Call `blanq_wallet_balances` when the user asks how much they hold, what their balance is, or what their wallet is worth.
 
 - `assets` has one entry per currency with a balance above zero. `total` is the estimated value of all holdings in the user's preferred currency.
 - Report each amount exactly as returned, with its currency. Don't convert, round or estimate amounts yourself.
@@ -24,7 +24,7 @@ Call `get_balances` when the user asks how much they hold, what their balance is
 
 ## Depositing cash
 
-Call `cash_deposit` when the user wants to deposit, add funds or top up their wallet, or asks for their deposit account details.
+Call `blanq_cash_deposit` when the user wants to deposit, add funds or top up their wallet, or asks for their deposit account details.
 
 - It takes no arguments, even when the user names a currency. The widget starts with the wallet's preferred currency, and the user picks the linked bank account they send from, which also sets the currency.
 - When `status` is `ready`, the widget shows the bank details to send the transfer to. If the widget doesn't appear, list each of `fields` with its label and value exactly as returned, including any note. When a memo or reference is among them, the deposit only arrives if the user includes it.
@@ -34,7 +34,7 @@ Call `cash_deposit` when the user wants to deposit, add funds or top up their wa
 
 ## Yield
 
-Call `cash_yield` when the user asks what their cash earns, or about yield, interest or rates.
+Call `blanq_cash_yield` when the user asks what their cash earns, or about yield, interest or rates.
 
 - `rates` holds the current yield rate in percent for each currency. Report the rates exactly as returned. If `rates` is missing, the rates aren't available right now.
 - `balances` holds the user's cash balance in each currency.
@@ -53,19 +53,15 @@ When a tool, API or website responds with an x402 `paymentRequired`:
    - If the payment never appeared in the conversation, give the user <https://wallet-dev.blanq.ai/action> as a clickable link to authorize it in their browser, then call `blanq_pay` again with the same `paymentRequestId`.
    - Otherwise the user declined or didn't authorize in time. Tell them and offer to try again; don't retry on your own.
 
-`fortune_cookie` sells a fortune for 1¢. Use it when the user wants to try a Blanq payment end to end.
+`blanq_fortune_cookie` sells a fortune for 1¢. Use it when the user wants to try a Blanq payment end to end.
 
 ## Shopping
 
-Call `blanq_shop` for anything the user wants to buy, whether or not they name a store.
-
-- If it returns `locationRequired`, ask the user for the recipient's first and last name, street address, city, state or region, postal code and country. Save them with `set_location`, then run the same search again.
-- The user opens a product in the shopping widget, picks its options and checks out there, with Blanq Pay or at the merchant's own checkout. There is no order or payment step for you to run, so point the user to the widget.
-- If the widget doesn't appear, list the products as markdown links with their price, merchant and rating.
+When the user wants to buy something, follow the Blanq `ucp` skill. If it isn't installed, read it at <https://agent-dev.blanq.ai/skill/ucp>.
 
 ## Everything else in the wallet
 
-Call `open_wallet` for any other wallet request, such as withdrawing funds, viewing account details or changing settings. It shows the wallet in the conversation, where the user completes the action themselves.
+Call `blanq_wallet_open` for any other wallet request, such as withdrawing funds, viewing account details or changing settings. It shows the wallet in the conversation, where the user completes the action themselves.
 
 If the wallet doesn't appear in the conversation, give the user the `url` from the result as a clickable link so they can open it in their browser.
 

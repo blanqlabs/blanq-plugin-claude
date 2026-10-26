@@ -1,8 +1,8 @@
 {
   "name": "blanq-open-dev",
   "displayName": "Blanq.open-dev",
-  "version": "1.6.4-rc.1",
-  "description": "Check balances, pay with x402 and shop with your Blanq wallet from the chat.",
+  "version": "1.6.5-rc.1",
+  "description": "Smart, secure agentic wallet",
   "author": {
     "name": "Blanq Labs",
     "email": "support@blanqlabs.com",
@@ -12,10 +12,10 @@
   "repository": "https://github.com/blanqlabs/blanq-plugin-claude",
   "keywords": [
     "wallet",
-    "stablecoin",
+    "self-custody",
     "usd",
     "eur",
-    "self-custody"
+    "stablecoin"
   ],
   "icon": "./assets/logo.png",
   "privacyPolicyUrl": "https://www-dev.blanq.ai/legal/privacy",
