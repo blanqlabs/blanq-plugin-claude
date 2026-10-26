@@ -13,7 +13,7 @@ If the Blanq tools aren't available, or a Blanq tool fails because the user isn'
 
 ## Balances
 
-Call `get_balances` when the user asks how much they hold, what their balance is, or what their wallet is worth.
+Call `blanq_wallet_balances` when the user asks how much they hold, what their balance is, or what their wallet is worth.
 
 - `assets` has one entry per currency with a balance above zero. `total` is the estimated value of all holdings in the user's preferred currency.
 - Report each amount exactly as returned, with its currency. Don't convert, round or estimate amounts yourself.
@@ -22,7 +22,7 @@ Call `get_balances` when the user asks how much they hold, what their balance is
 
 ## Depositing cash
 
-Call `cash_deposit` when the user wants to deposit, add funds or top up their wallet, or asks for their deposit account details.
+Call `blanq_cash_deposit` when the user wants to deposit, add funds or top up their wallet, or asks for their deposit account details.
 
 - It takes no arguments, even when the user names a currency. The widget starts with the wallet's preferred currency, and the user picks the linked bank account they send from, which also sets the currency.
 - When `status` is `ready`, the widget shows the bank details to send the transfer to. If the widget doesn't appear, list each of `fields` with its label and value exactly as returned, including any note. When a memo or reference is among them, the deposit only arrives if the user includes it.
@@ -32,7 +32,7 @@ Call `cash_deposit` when the user wants to deposit, add funds or top up their wa
 
 ## Yield
 
-Call `cash_yield` when the user asks what their cash earns, or about yield, interest or rates.
+Call `blanq_cash_yield` when the user asks what their cash earns, or about yield, interest or rates.
 
 - `rates` holds the current yield rate in percent for each currency. Report the rates exactly as returned. If `rates` is missing, the rates aren't available right now.
 - `balances` holds the user's cash balance in each currency.
@@ -40,7 +40,7 @@ Call `cash_yield` when the user asks what their cash earns, or about yield, inte
 
 ## Everything else in the wallet
 
-Call `open_wallet` for any other wallet request, such as withdrawing funds, viewing account details or changing settings. It shows the wallet in the conversation, where the user completes the action themselves.
+Call `blanq_wallet_open` for any other wallet request, such as withdrawing funds, viewing account details or changing settings. It shows the wallet in the conversation, where the user completes the action themselves.
 
 If the wallet doesn't appear in the conversation, give the user the `url` from the result as a clickable link so they can open it in their browser.
 
