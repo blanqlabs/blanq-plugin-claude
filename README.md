@@ -1,20 +1,24 @@
 # Blanq
 
-Blanq wallet is the first AI-native secure, self-custodial wallet for tokenized assets. Assets are always in the user's control, while the signing keys stay secure in Blanq's Trusted Execution Environment (TEE).
+Blanq is a smart, secure wallet that lives natively in your agents.
 
-This plugin connects Claude to your Blanq wallet, so you can check your balances and open your wallet in the conversation, where you manage it yourself.
+Smart: Your assets earn attractive yield while you hold and rewards when you pay. You can deposit and withdraw funds into your wallet anytime, just like a traditional bank account.
+
+Secure: All your assets are tokenized on public blockchains and held self-custodially. The signing keys are generated on-the-fly in Blanq's Trusted Execution Environment (TEE) with multi-factor authorization and are never stored. This means only you control your assets.
+
+This plugin connects Claude to your Blanq wallet. Open your wallet in the conversation, check your balances, get deposit instructions and see what your cash earns.
 
 ## Use it
 
 1. Install the plugin, then connect Blanq in Claude's plugin or connector settings and sign in to your Blanq wallet.
 2. Ask Claude things like:
 
-   - "What's my Blanq balance?"
-   - "Open my Blanq wallet."
-   - "How much do I hold in euros?"
+   - "Open my wallet."
+   - "What's my wallet balance?"
+   - "How do I deposit cash?"
 
 ## Data
 
-The plugin runs no code on your device. It reaches Blanq's MCP server at the URL in its MCP configuration, signed in as you through OAuth. It returns your balance in each currency, an estimated total, and a link to your wallet.
+The plugin runs no code on your device. It reaches Blanq's MCP server at the URL in its MCP configuration, signed in as you through OAuth and lets you interact with your wallet from your chat.
 
 Privacy policy: <https://blanq.ai/legal/privacy>
