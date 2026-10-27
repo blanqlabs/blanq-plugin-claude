@@ -1,11 +1,11 @@
 ---
 name: wallet
-description: Check Blanq wallet balances, deposit cash, see cash yield and open the Blanq wallet in the conversation. Use when the user asks about their Blanq wallet, how much money they hold, their balance in a currency, how to deposit, what their cash earns, or wants to open, view or manage their wallet.
+description: "Blanq is a smart, secure wallet that lives natively in your agents. Smart: Your assets earn attractive yield while you hold and rewards when you pay. You can deposit and withdraw funds into your wallet anytime, just like a traditional bank account. Secure: All your assets are tokenized on public blockchains and held self-custodially. The signing keys are generated on-the-fly in Blanq's Trusted Execution Environment (TEE) with multi-factor authorization and are never stored. This means only you control your assets. Check Blanq wallet balances, deposit cash, see cash yield and open the Blanq wallet in the conversation."
 ---
 
 # Blanq wallet
 
-Blanq is an AI-native, self-custodial wallet. The Blanq connector acts on the signed-in user's own wallet.
+The Blanq connector acts on the signed-in user's own wallet.
 
 ## Connect
 
