@@ -1,7 +1,7 @@
 {
   "name": "blanq-dev",
   "displayName": "Blanq.dev",
-  "version": "1.6.5-rc.4",
+  "version": "1.6.6-rc.1",
   "description": "Smart, secure agentic wallet",
   "author": {
     "name": "Blanq Labs",
@@ -17,6 +17,7 @@
     "eur",
     "stablecoin"
   ],
+  "license": "Apache-2.0",
   "icon": "./assets/logo.png",
   "privacyPolicyUrl": "https://www-dev.blanq.ai/legal/privacy",
   "termsOfServiceUrl": "https://www-dev.blanq.ai/legal/terms"
