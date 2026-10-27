@@ -1,12 +1,12 @@
 # Blanq.open-dev
 
-Blanq is a smart, secure wallet that lives natively in your agents. 
-Smart: Your assets earn attractive yield while you hold and rewards when you pay. You can deposit and withdraw funds into your wallet anytime, just like a traditional bank account. 
-Secure: All your assets are tokenized on public blockchains and held self-custodially. The signing keys are generated on-the-fly in Blanq's Trusted Execution Environment (TEE) with multi-factor authorization and are never stored. This means only you control your assets. 
-This server lets chat agents connect to users' Blanq wallet and interact with it in-chat.
-The user can check balance, see how to deposit assets, enquire what their cash earns and shop products and services over x402 and ucp protocol.
+Blanq is a smart, secure wallet that lives natively in your agents.
 
-This plugin connects Claude to your Blanq wallet. Interact with your Blanq wallet in the conversation - eg. open wallet widgets, check balances, get deposit instructions and yield information.
+Smart: Your assets earn attractive yield while you hold and rewards when you pay. You can deposit and withdraw funds into your wallet anytime, just like a traditional bank account.
+
+Secure: All your assets are tokenized on public blockchains and held self-custodially. The signing keys are generated on-the-fly in Blanq's Trusted Execution Environment (TEE) with multi-factor authorization and are never stored. This means only you control your assets.
+
+This plugin connects Claude to your Blanq wallet. Open your wallet in the conversation, check your balances, get deposit instructions, see what your cash earns, pay with x402 and shop across Blanq's merchants.
 
 ## Use it
 

@@ -1,6 +1,6 @@
 ---
 name: ucp
-description: Shop Blanq's catalog across its merchants and check out in the shopping widget, with Blanq Pay or at the merchant's own checkout. Use when the user wants to buy something or find a product to buy, whether or not they name a store.
+description: "Shop Blanq's catalog across its merchants and check out in the shopping widget, with Blanq Pay or at the merchant's own checkout."
 ---
 
 # Blanq shop

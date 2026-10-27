@@ -1,11 +1,11 @@
 ---
 name: wallet
-description: Use the Blanq wallet to check balances, deposit cash, see cash yield, open the wallet and pay with x402. Use when the user asks about their Blanq wallet or the money they hold, wants to deposit or know what their cash earns, or when a tool, API or website asks for an x402 payment.
+description: "Blanq is a smart, secure wallet that lives natively in your agents. Smart: Your assets earn attractive yield while you hold and rewards when you pay. You can deposit and withdraw funds into your wallet anytime, just like a traditional bank account. Secure: All your assets are tokenized on public blockchains and held self-custodially. The signing keys are generated on-the-fly in Blanq's Trusted Execution Environment (TEE) with multi-factor authorization and are never stored. This means only you control your assets. Use the Blanq wallet to check balances, deposit cash, see cash yield, open the wallet and pay x402 payment requests from tools, APIs and websites."
 ---
 
 # Blanq wallet
 
-Blanq is an AI-native, self-custodial wallet. Its tools act on the signed-in user's own wallet, and every payment needs the user's explicit authorization in the wallet.
+Blanq's tools act on the signed-in user's own wallet, and every payment needs the user's explicit authorization in the wallet.
 
 ## Connect
 
