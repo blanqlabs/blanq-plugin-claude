@@ -32,10 +32,10 @@ Call `blanq_cash_deposit` when the user wants to deposit, add funds or top up th
 
 ## Yield
 
-Call `blanq_cash_yield` when the user asks what their cash earns, or about yield, interest or rates. It works before the user has a Blanq wallet too.
+Call `blanq_cash_yield` when the user asks what their cash earns, or about yield, interest or rates.
 
 - `rates` holds the current yield rate in percent for each currency. Report the rates exactly as returned. If `rates` is missing, the rates aren't available right now.
-- `balances` holds the user's cash balance in each currency. If `balances` is missing, the user isn't signed in: the widget offers to create a wallet, and if the widget doesn't appear, tell them they can create one at https://wallet-dev.blanq.ai/signup.
+- `balances` holds the user's cash balance in each currency.
 - Don't estimate or project earnings yourself.
 
 ## Everything else in the wallet
