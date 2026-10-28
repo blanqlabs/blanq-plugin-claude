@@ -1,7 +1,7 @@
 {
   "name": "blanq",
   "displayName": "Blanq",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Smart, secure agentic wallet",
   "author": {
     "name": "Blanq Labs",
@@ -19,6 +19,8 @@
   ],
   "license": "Apache-2.0",
   "icon": "./assets/logo.png",
+  "documentationUrl": "https://blanq.ai/help#claude",
+  "supportUrl": "https://blanq.ai/help#claude",
   "privacyPolicyUrl": "https://blanq.ai/legal/privacy",
   "termsOfServiceUrl": "https://blanq.ai/legal/terms"
 }
